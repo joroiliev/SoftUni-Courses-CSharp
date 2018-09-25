@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P01_URL_Decode", "P01_URL_Decode\P01_URL_Decode.csproj", "{99A0EE64-9F89-4E71-AD6F-AACB06893A7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02_Validate_URL", "P02_Validate_URL\P02_Validate_URL.csproj", "{9F3A5127-F1D9-4F05-AD33-F5A979461DA3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99A0EE64-9F89-4E71-AD6F-AACB06893A7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99A0EE64-9F89-4E71-AD6F-AACB06893A7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99A0EE64-9F89-4E71-AD6F-AACB06893A7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99A0EE64-9F89-4E71-AD6F-AACB06893A7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F3A5127-F1D9-4F05-AD33-F5A979461DA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F3A5127-F1D9-4F05-AD33-F5A979461DA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F3A5127-F1D9-4F05-AD33-F5A979461DA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F3A5127-F1D9-4F05-AD33-F5A979461DA3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {18027D42-0B19-41F8-A513-EDB08D0B5565}
+	EndGlobalSection
+EndGlobal
