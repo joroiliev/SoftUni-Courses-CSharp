@@ -1,7 +1,6 @@
 ﻿namespace P02_Validate_URL
 {
     using System;
-    using System.Linq;
     using System.Net;
 
     public class StartUp
@@ -18,8 +17,8 @@
                 string uriHost = uri.Host;
                 int uriPort = uri.Port;
                 string uriPath = uri.AbsolutePath;
-                string uriQuery = uri.Query;
-                string uriFragment = uri.Fragment;
+                string uriQuery = uri.Query.TrimStart('?');
+                string uriFragment = uri.Fragment.TrimStart('#');
 
                 Console.WriteLine(uriScheme);
                 Console.WriteLine(uriHost);
