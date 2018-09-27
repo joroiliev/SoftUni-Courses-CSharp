@@ -13,14 +13,18 @@
             string[] httpRequest = Console.ReadLine().Split();
             string requestMethod = httpRequest[0].ToLower();
             string requestPath = httpRequest[1].TrimStart('/');
-            //string httpVer = httpRequest[2];
 
-            //Path path = new Path(requestPath);
+            Path outputPath = new Path(requestPath);
 
             foreach (Path path in paths)
             {
-                path.CheckRequestIsValid(requestPath, requestMethod);
+                if (path.CheckRequestIsValid(requestPath, requestMethod) == true)
+                {
+                    outputPath = path;
+                }
             }
+
+            Console.WriteLine(outputPath);
         }
 
         private static List<Path> GetListOfValidPaths()
@@ -33,8 +37,7 @@
                 string[] pathArgs = input.Split('/', StringSplitOptions.RemoveEmptyEntries);
                 string mainPath = pathArgs[0];
                 string method = pathArgs[1];
-
-                //if (paths.Select(x => x.MainPath).Contains(mainPath))
+                
                 if (paths.Any(x => x.MainPath == mainPath))
                 {
                     paths.First(x => x.MainPath == mainPath).Methods.Add(method);
@@ -51,7 +54,5 @@
 
             return paths;
         }
-
-        
     }
 }

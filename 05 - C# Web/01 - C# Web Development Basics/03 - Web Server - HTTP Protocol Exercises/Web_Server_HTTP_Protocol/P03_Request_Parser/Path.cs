@@ -1,6 +1,5 @@
 ﻿namespace P03_Request_Parser
 {
-    using System;
     using System.Collections.Generic;
     using System.Text;
 
@@ -17,24 +16,23 @@
             this.statusCode = 404;
         }
 
-        private string mainPath;
-        private List<string> methods;
         private string statusMessage;
         private int statusCode;
 
-        public string MainPath { get; set; }
-        public List<string> Methods { get; set; }
+        public string MainPath { get; }
+        public List<string> Methods { get; }
 
-        public void CheckRequestIsValid(string mainPath, string method)
+        public bool CheckRequestIsValid(string mainPath, string method)
         {
-            if (this.Methods.Contains(method))
+            if (this.Methods.Contains(method) && this.MainPath == mainPath)
             {
                 this.statusMessage = OK;
                 this.statusCode = 200;
+
+                return true;
             }
 
-            Console.WriteLine(this.ToString());
-            Environment.Exit(0);
+            return false;
         }
 
         public override string ToString()
